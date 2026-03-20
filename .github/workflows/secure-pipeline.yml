@@ -16,6 +16,8 @@ jobs:
     #2 Gitleaks Secret Scan
     - name: Run Gitleaks
       uses: zricethezav/gitleaks-action@v2
+      with:
+        args: detect --no-git --exit-code 1
 
     #3 SAST - Semgrep
     - name: Run Semgrep
