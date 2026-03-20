@@ -28,7 +28,7 @@ jobs:
       with:
         scan-type: 'fs'
         format: 'table'
-        severity: 'HIGH-CRITICAL'
+        severity: 'HIGH,CRITICAL'
         exit-code: '1'
 
     #5 Build Docker Image
