@@ -2,10 +2,10 @@ name: Secure CICD Pipeline
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
-  security-checks:
+  security-pipeline:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,7 @@ jobs:
 
     #2 Gitleaks Secret Scan
     - name: Run Gitleaks
-      uses: gitleaks/gitleaks-action@v2
+      uses: zricethezav/gitleaks-action@v2
 
     #3 SAST - Semgrep
     - name: Run Semgrep
